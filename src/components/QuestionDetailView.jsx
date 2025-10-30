@@ -38,7 +38,7 @@ export function QuestionDetailView({ results }) {
   return (
     <Card className="bg-[rgba(15,10,25,0.8)] backdrop-blur-lg border border-[rgba(255,255,255,0.08)] rounded-2xl shadow-lg shadow-purple-900/30">
       <CardHeader>
-        <CardTitle className="text-xl font-semibold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+        <CardTitle className="text-xl font-semibold bg-linear-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
           Question-by-Question Analysis
         </CardTitle>
         <CardDescription className="text-[rgba(224,230,237,0.75)]">
@@ -52,7 +52,7 @@ export function QuestionDetailView({ results }) {
             {(results || []).map((result, index) => (
               <Card
                 key={index}
-                className="relative rounded-2xl border border-[rgba(255,255,255,0.08)] bg-gradient-to-br from-[#120a1c] via-[#1b0f2d] to-[#0b0612] shadow-lg shadow-purple-900/20 hover:shadow-purple-800/30 transition-all duration-300"
+                className="relative rounded-2xl border border-[rgba(255,255,255,0.08)] bg-linear-to-br from-[#120a1c] via-[#1b0f2d] to-[#0b0612] shadow-lg shadow-purple-900/20 hover:shadow-purple-800/30 transition-all duration-300"
               >
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between gap-3">
@@ -80,7 +80,7 @@ export function QuestionDetailView({ results }) {
 
                 <CardContent className="space-y-4">
                   <div className="space-y-3">
-                    <div className="p-3 bg-gradient-to-r from-green-900/20 to-green-700/10 border border-green-500/30 rounded-xl">
+                    <div className="p-3 bg-linear-to-r from-green-900/20 to-green-700/10 border border-green-500/30 rounded-xl">
                       <p className="text-xs text-green-300 mb-1">
                         Expected Answer
                       </p>
@@ -89,7 +89,7 @@ export function QuestionDetailView({ results }) {
                       </p>
                     </div>
 
-                    <div className="p-3 bg-gradient-to-r from-blue-900/20 to-blue-700/10 border border-blue-500/30 rounded-xl">
+                    <div className="p-3 bg-linear-to-r from-blue-900/20 to-blue-700/10 border border-blue-500/30 rounded-xl">
                       <p className="text-xs text-blue-300 mb-1">
                         Actual Answer
                       </p>
@@ -111,7 +111,7 @@ export function QuestionDetailView({ results }) {
                       </div>
                       <Progress
                         value={result.bleuScore || 0}
-                        className="h-2 bg-[rgba(255,255,255,0.1)] [&>div]:bg-gradient-to-r [&>div]:from-purple-500 [&>div]:to-blue-400"
+                        className="h-2 bg-[rgba(255,255,255,0.1)] [&>div]:bg-linear-to-r [&>div]:from-purple-500 [&>div]:to-blue-400"
                       />
                     </div>
 
@@ -122,13 +122,13 @@ export function QuestionDetailView({ results }) {
                       </div>
                       <Progress
                         value={result.tokenOverlap || 0}
-                        className="h-2 bg-[rgba(255,255,255,0.1)] [&>div]:bg-gradient-to-r [&>div]:from-cyan-400 [&>div]:to-teal-300"
+                        className="h-2 bg-[rgba(255,255,255,0.1)] [&>div]:bg-linear-to-r [&>div]:from-cyan-400 [&>div]:to-teal-300"
                       />
                     </div>
                   </div>
 
                   {result.exactMatch && (
-                    <div className="flex items-center gap-2 text-xs text-green-300 bg-gradient-to-r from-green-800/20 to-green-700/10 border border-green-500/30 p-2 rounded-lg">
+                    <div className="flex items-center gap-2 text-xs text-green-300 bg-linear-to-r from-green-800/20 to-green-700/10 border border-green-500/30 p-2 rounded-lg">
                       <CheckCircle2 className="w-4 h-4" />
                       <span>Exact match detected</span>
                     </div>
